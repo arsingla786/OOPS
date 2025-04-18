@@ -1,22 +1,22 @@
 #include <iostream>
-//#include "Hero.cpp"
 using namespace std;
-//create a different class file and include it or create inside the same file
-class Hero{
+
+class Human{
    
     private://this is access modifiers to access the data - public,private,potected
     int health;
   //  private://this can only be accessed in this block
- // protected:
+
     char level;
+public:
         int getHealth(){
-                return health;
+                return health;//this is getter - to access the value of private members outside the class
         }
         char getLevel(){
             return level;
         }
         void setHealth(int  h){
-                health =h;
+                health =h;//this is setter to give a value to private members
         }
         void setLevel(char l){
             level = l;
@@ -24,14 +24,14 @@ class Hero{
 };
 
 int main() {
-    Hero ramesh;//created an object of type Hero
+    Human ramesh;//created an object of type Hero
     // ramesh.health=70;
     // ramesh.level='a';
     cout<<"size : "<<sizeof(ramesh)<<endl;//8
     cout<<"health is : "<<ramesh.health<<endl;
     cout<<"level is : "<<ramesh.level<<endl;
 
- hero *ramesh= new Hero; //this is for dynamic memory
+ Human *ramesh= new Hero; //this is for dynamic memory
     //...........................
     ramesh.setHealth(70);
 
